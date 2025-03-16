@@ -1,0 +1,23 @@
+{
+  "name": "personalsite",
+  "version": "1.0.0",
+  "description": "Personal site to display experiences, resume, etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RegmiS/personalsite.git"
+  },
+  "author": "RegmiS",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/RegmiS/personalsite/issues"
+  },
+  "homepage": "https://github.com/RegmiS/personalsite#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "tailwindcss": "^4.0.14"
+  }
+}
