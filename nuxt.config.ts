@@ -13,4 +13,9 @@ export default defineNuxtConfig({
   devServer: {
     port: 9000
   },
-})
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: '',
+    }
+  }
+});

@@ -1,19 +1,4 @@
-<script setup>
-import 'vue3-carousel/carousel.css'
-import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
-const images = Array.from({ length: 10 }, (_, index) => ({
-  id: index + 1,
-  url: `https://picsum.photos/seed/${Math.random()}/800/600`,
-}))
-
-const config = {
-  height: 300,
-  itemsToShow: 3,
-  gap: 5,
-  wrapAround: true,
-}
-</script>
 
 <template>
   <body class="">
@@ -150,3 +135,28 @@ const config = {
   object-fit: contain;
 }
 </style>
+
+<script setup>
+
+import 'vue3-carousel/carousel.css'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
+
+const images = Array.from({ length: 10 }, (_, index) => ({
+  id: index + 1,
+  url: `https://picsum.photos/seed/${Math.random()}/800/600`,
+}))
+
+const config = {
+  height: 300,
+  itemsToShow: 3,
+  gap: 5,
+  wrapAround: true,
+}
+
+import ProjectCard from './components/ProjectCard.vue'
+import { useProjects } from './composables/useProjects'
+
+const {projects, fetchProjects} = useProjects();
+onMounted(fetchProjects);
+
+</script>

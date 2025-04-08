@@ -72,4 +72,7 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Add pocketbase api into a .env file in root folder
+```env
+NUXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8090/
+```
