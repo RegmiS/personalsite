@@ -2,7 +2,11 @@
     <InfoBar />
     <div class="ml-100 flex flex-col mr-7">
       <ProjectFilter />
-      <ProjectCard v-for="project in projects" :key="project.id"/>
+      <ProjectCard 
+        v-for="project in projects"
+        :key="project.id"
+        :project="project"
+      />
     </div>
 </template>
 
@@ -27,4 +31,5 @@ import ProjectFilter from '../components/ProjectFilter.vue'
 
 const {projects, fetchProjects} = useProjects();
 onMounted(fetchProjects);
+
 </script>
