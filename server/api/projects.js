@@ -5,7 +5,7 @@ export default defineEventHandler(async () => {
     const userId = '3wllcx2wa1j8dij';
     
     const projects = await pb.collection('projects').getFullList({
-        filter: `user = "${userId}"`,
+        filter: `user="${userId}"`,
         sort: '-created',
         expand: 'images, tags',
     });

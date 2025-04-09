@@ -4,7 +4,10 @@ export const useProjects = () => {
     const fetchProjects = async () => {
         if (projects.value.length === 0){
             const data = await $fetch('/api/projects');
-            projects.value = data.items;
+            projects.value = data.map((project) => ({
+                id: project.projectname,
+                
+            }));
         }
     };
 
