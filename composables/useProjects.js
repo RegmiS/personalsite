@@ -1,10 +1,11 @@
 export const useProjects = () => {
     const projects = useState('projects', () => []);
+    const allTags = useState('allTags', () => []);
 
     const fetchProjects = async () => {
         if (projects.value.length === 0){
             const data = await $fetch('/api/projects');
-            console.log(data);
+            // console.log(data);
             
             projects.value = data.map((project) => {
                 return {
@@ -18,11 +19,18 @@ export const useProjects = () => {
                 }
             });
         }
+
+        const tagSet = new Set();
+        projects.value.forEach(p => {
+            p.tagNames.forEach(tag => tagSet.add(tag));
+        });
+
+        allTags.value = Array.from(tagSet);
     };
 
     // console.log(projects);
 
     return {
-        projects, fetchProjects,
+        projects, allTags, fetchProjects,
     }
 }

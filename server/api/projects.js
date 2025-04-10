@@ -19,7 +19,7 @@ export default defineEventHandler(async () => {
         });
         
         project["urls"] = urls;
-
+        
         let tagNames = [];
         const tags = project.expand?.tags || [];
         tags.forEach(tag => {
