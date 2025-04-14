@@ -1,6 +1,6 @@
 
 <template>
-    <div class="fixed m-4 mr-400 flex w-90 shrink-5 flex-col overflow-y-auto rounded-4xl p-8 z-10 gap-y-6 h-full">
+    <div class="flex flex-col overflow-y-auto p-8 z-10 gap-y-6 h-full">
       <img class="rounded-4xl cover" src="/public/images/25648545.jpeg" width="400" height="400" alt="" aria-placeholder="test" />
       <div class="text-center shadow-2xl">
         <p class="font-bold text-slate-900 text-xl">RegmiS</p>

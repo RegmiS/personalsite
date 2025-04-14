@@ -3,25 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "nuxi dev",
+    "build": "nuxi build"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.3",
-    "nuxt": "^3.16.1",
+    "@nuxtjs/tailwindcss": "^6.13.2",
+    "nuxt": "^3.16.2",
     "pocketbase": "^0.25.2",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0",
-    "vue3-carousel": "^0.15.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.3",
-    "vue-tsc": "^2.2.8"
+    "vue-router": "^4.5.0"
   }
 }

@@ -1,0 +1,8 @@
+[build]
+command = "npx nuxi build"
+publish = "dist"
+
+[dev]
+command = "nuxi dev"
+port = 3000
+targetPort = 3000

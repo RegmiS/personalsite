@@ -2,14 +2,14 @@
   <div class="bg-slate-300 m-4 p-8 rounded-4xl drop-shadow-[0_0px_10px_rgba(0,0,0,0.20)] flex gap-y-3 flex-col">
     <p class="text-left text-3xl font-medium">{{ project.name }}</p>
 
-    <Carousel v-bind="config">
+    <!-- <Carousel v-bind="config">
       <Slide v-for="image in imageUrls" class="">
         <img :src="image" alt="image" class=""/>
       </Slide>
       <template #addons>
         <Navigation />
       </template>
-    </Carousel>
+    </Carousel> -->
     
     <p class="border-2 p-2">{{ project.description }}</p>
     <div class="flex flex-row gap-2">
@@ -37,8 +37,8 @@
 <script setup>
 const props = defineProps(['project']);
 
-import 'vue3-carousel/carousel.css'
-import { Carousel, Slide, Navigation } from 'vue3-carousel'
+// import 'vue3-carousel/carousel.css'
+// import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
 const imageUrls = props['project'].urls;
 

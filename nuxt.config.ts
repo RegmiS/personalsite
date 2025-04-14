@@ -1,23 +1,18 @@
-import tailwindcss from "@tailwindcss/vite";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  css: [
-    '~/public/css/main.css',
-  ],
-  vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
   },
-  devServer: {
-    port: 9000
-  },
+  modules: ['@nuxtjs/tailwindcss'],
   runtimeConfig: {
     public: {
-      apiBaseUrl: 'https://pocketbase-setup-production.up.railway.app',
+      apiBaseUrl: 'https://pocketbase-setup-production.up.railway.app'
     }
   },
-});
+  nitro:{
+    preset: 'netlify'
+  },
+})

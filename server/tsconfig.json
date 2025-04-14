@@ -1,6 +1,3 @@
 {
-  "extends": "../.nuxt/tsconfig.server.json",
-  "compilerOptions": {
-    "types": ["node"]
-  }
+  "extends": "../.nuxt/tsconfig.server.json"
 }
