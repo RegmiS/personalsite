@@ -1,7 +1,10 @@
-import { usePocketbase } from "~/composables/usePocketBase";
+import PocketBase from 'pocketbase';
 
 export default defineEventHandler(async () => {
-    const pb = usePocketbase();
+    const config = useRuntimeConfig();
+    const baseUrl = config.public.apiBaseUrl;
+    const pb = new PocketBase(baseUrl);
+
     const userId = '3wllcx2wa1j8dij';
     
     const projects = await pb.collection('projects').getFullList({
