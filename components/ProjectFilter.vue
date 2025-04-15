@@ -1,4 +1,3 @@
-
 <template>
   <div class="p-6 flex gap-y-3 flex-col">
     <p class="underline underline-offset-2 text-left text-7xl font-bold">Projects</p>
@@ -10,43 +9,33 @@
         <p class="bg-slate-400 rounded-4xl w-12 text-center">Hard</p>
       </div> -->
       <div class="flex flex-row p-4 pt-1 gap-x-3 mt-3">
-        <button
-          :class="{ 
-            'bg-slate-400 rounded-4xl w-17 text-center  ': mode != 'all', 
-            'bg-slate-400 rounded-4xl w-17 text-center text-white': mode === 'all' }"
-          @click="setMode('all')"
-        >
+        <button :class="{
+          'filter': mode != 'all',
+          'filter-selected': mode === 'all'
+        }" @click="setMode('all')">
           All
         </button>
-        <button
-          :class="{ 
-            'bg-slate-400 rounded-4xl w-17 text-center': mode != 'none',
-            'bg-slate-400 rounded-4xl w-17 text-center text-white': mode === 'none' }"
-          @click="setMode('none')"
-        >
+        <button :class="{
+          'filter': mode != 'none',
+          'filter-selected': mode === 'none'
+        }" @click="setMode('none')">
           None
         </button>
-        <button
-          :class="{ 
-            'bg-slate-400 rounded-4xl w-17 text-center': mode != 'manual',
-            'bg-slate-400 rounded-4xl w-17 text-center text-white': mode === 'manual' }"
-          @click="setMode('manual')"
-        >
+        <button :class="{
+          'filter': mode != 'manual',
+          'filter-selected': mode === 'manual'
+        }" @click="setMode('manual')">
           Manual
         </button>
 
-        <!-- bg-slate-400 rounded-4xl w-17 text-center -->
       </div>
+
       <div class="flex flex-row p-4 pt-1 gap-x-3">
-        <button
-          :class="{ 
-            'bg-slate-400 rounded-4xl w-17 text-center text-white': selectedTags.includes(tag),
-            'bg-slate-400 rounded-4xl w-17 text-center': allTags.includes(tag) }"
-          v-for="tag in allTags"
-          :key = tag
-          @click="toggleTag(tag)"
-        >
-        {{ tag }}
+        <button :class="{
+          'tagbtn text-white': selectedTags.includes(tag),
+          'tagbtn': allTags.includes(tag)
+        }" v-for="tag in allTags" :key=tag @click="toggleTag(tag)">
+          {{ tag }}
         </button>
 
       </div>
@@ -54,13 +43,28 @@
   </div>
 </template>
 
+<style>
+.filter {
+  @apply rounded-lg bg-slate-600 w-16 font-medium text-white;
+}
+
+.filter-selected {
+  @apply font-medium bg-red-400 text-black rounded-lg w-16;
+}
+
+.tagbtn {
+  @apply bg-red-400 rounded-md text-center p-1;
+}
+</style>
+
 <script setup>
+import { ref, onMounted, watch } from 'vue';
 
 const props = defineProps(['allTags']);
 const emit = defineEmits(['update:selectedTags', 'update:mode']);
 
-const selectedTags = ref([]);
-const mode = ref('all');
+const selectedTags = ref([]); // cloen alltags at load
+const mode = ref('all'); // reactive reference, need to write mode.value inside templates
 
 function setMode(newMode) {
   mode.value = newMode;
@@ -90,5 +94,6 @@ function toggleTag(tag) {
   }
 
   emit('update:selectedTags', [...selectedTags.value]);
+
 }
 </script>

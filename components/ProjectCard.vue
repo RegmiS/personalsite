@@ -4,45 +4,43 @@
 
     <Carousel v-bind="config">
       <Slide v-for="image in imageUrls" class="">
-        <img :src="image" alt="image" class=""/>
+        <img :src="image" alt="image" class="" />
       </Slide>
       <template #addons>
         <Navigation />
       </template>
     </Carousel>
-    
+
     <p class="border-2 p-2">{{ project.description }}</p>
     <div class="flex flex-row gap-3">
-      <a class="flex flex-row bg-slate-500 rounded-md" :href=project.website target="_blank" rel="noopener noreferrer">
-        <img width="24" height="28" src="/public/websiteopen.svg">
+      <a v-if="project.website !== ''" class="flex flex-row bg-slate-500 rounded-md" :href="project.website"
+        target="_blank" rel="noopener noreferrer">
+        <img width="24" height="28" src="/public/websiteopen.svg" />
         <p class="text-black font-bold">Website</p>
       </a>
-      <a class="flex flex-row bg-slate-500 rounded-md" :href=project.github target="_blank" rel="noopener noreferrer">
-        <img width="24" height="28" src="/public/github.svg">
+
+      <a v-if="project.github !== ''" class="flex flex-row bg-slate-500 rounded-md" :href="project.github"
+        target="_blank" rel="noopener noreferrer">
+        <img width="24" height="28" src="/public/github.svg" />
         <p class="text-white font-bold">Github</p>
       </a>
     </div>
 
+
     <div class="flex flex-row gap-3">
-      <Tag
-        v-for="tag in project.tagNames"
-        :key = "tag"
-        :title ="tag"
-      />
+      <Tag v-for="tag in project.tagNames" :key="tag" :title="tag" />
     </div>
 
   </div>
 </template>
 
 <style>
-
 .carousel {
   --vc-pgn-background-color: rgba(255, 255, 255, 0.7);
   --vc-pgn-active-color: rgba(255, 255, 255, 1);
   --vc-nav-background: rgba(255, 255, 255, 0.7);
   --vc-nav-border-radius: 50%;
 }
-
 </style>
 
 <script setup>

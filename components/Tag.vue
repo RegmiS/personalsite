@@ -1,5 +1,5 @@
 <template>
-    <p class="bg-slate-400 rounded-4xl w-auto text-center p-1.5">{{ title }}</p>
+  <p class="bg-slate-400 rounded-md w-auto text-center p-1.5 ">{{ title }}</p>
 </template>
 
 
