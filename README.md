@@ -1,6 +1,41 @@
-# Nuxt Minimal Starter
+# Personal website - made to display projects and learn new tech
+Project is built using Pocketbase hosted on Railway and frontend is hosted on netlify
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### Pocketbase setup:
+```bash
+curl -L https://github.com/pocketbase/pocketbase/releases/latest/download/pocketbase_0.21.0_linux_amd64.zip -o pocketbase.zip
+sudo apt install unzip
+unzip pocketbase.zip
+chmod +x pocketbase
+```
+
+Setup the docker file
+```docker
+# Use Alpine for a lightweight image
+FROM alpine:3.18
+
+# Install necessary libs
+RUN apk add --no-cache ca-certificates
+
+# Create app directory
+WORKDIR /app
+
+# Copy PocketBase binary
+COPY pocketbase .
+
+# Copy optional data
+COPY pb_data ./pb_data
+
+# Make binary executable
+RUN chmod +x ./pocketbase
+
+# Expose the default port
+EXPOSE 8090
+
+# Run PocketBase
+CMD ["./pocketbase", "serve", "--http=0.0.0.0:8090"]
+```
+Send dockerfile onto whatever cloud hosting serve used to host PocketBase DB
 
 ## Setup
 
@@ -9,33 +44,15 @@ Make sure to install dependencies:
 ```bash
 # npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm i -g netlify # install netlify globally
 ```
 
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
-
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -46,30 +63,6 @@ Build the application for production:
 # npm
 npm run build
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+# pushing to netlify after building
+netlify deploy
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
