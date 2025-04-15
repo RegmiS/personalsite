@@ -6,7 +6,7 @@
     </div>
 
     <!-- Main Content (Filter + Projects) -->
-    <div class="w-3/4 p-6 flex flex-col gap-6 overflow-y-auto">
+    <div class="w-3/4 p-3 flex flex-col overflow-y-auto">
       <ProjectFilter
         :allTags="allTags"
         @update:mode="mode = $event"

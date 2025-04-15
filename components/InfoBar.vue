@@ -10,7 +10,7 @@
       <p class="text-left font-bold text-3xl">Pages</p>
       <div class="ml-2 flex flex-col mt-2 gap-2">
         <NuxtLink class="text-xl underline underline-offset-2 flex flex-row gap-2" to="/">
-          <img class="" src="/public/desktop_cloud.svg">
+          <img class="" src="/public/desktop_cloud_stack.svg">
           Projects
         </NuxtLink>
         <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2" to="/">
@@ -29,12 +29,12 @@
           <img class="" width="24" height="28" src="/public/linkedin.svg">
           Linkedin
         </NuxtLink>
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2" to="/">
+        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-1" to="/">
           <img class="" width="24" height="28" src="/public/pdf.svg">
           <img class="" width="24" height="28" src="/public/newtab.svg">
           Resume Open
         </NuxtLink>
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2" to="/">
+        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-1" to="/">
           <img class="" width="24" height="28" src="/public/pdf.svg">
           <img class="" width="24" height="28" src="/public/download.svg">
           Resume Download
