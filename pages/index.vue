@@ -12,7 +12,7 @@
         @update:mode="mode = $event"
         @update:selectedTags="selectedTags = $event"
       />
-      <ProjectCard 
+      <ProjectCard
         v-for="project in filteredProjects"
         :key="project.id"
         :project="project"
@@ -21,18 +21,6 @@
   </div>
 </template>
 
-<style>
-.carousel {
-  --vc-nav-background: rgba(255, 255, 255, 0.7);
-  --vc-nav-border-radius: 100%;
-}
-.carimg {
-  /* border-radius: 8px; */
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-</style>
 
 <script setup>
 import ProjectCard from '../components/ProjectCard.vue'
