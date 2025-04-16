@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   runtimeConfig: {
     public: {
-      apiBaseUrl: 'https://pocketbase-setup-production.up.railway.app'
+      apiBaseUrl: process.env.API_BASE_URL
     }
   },
   nitro:{

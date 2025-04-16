@@ -47,6 +47,12 @@ npm install
 npm i -g netlify # install netlify globally
 ```
 
+```bash
+# need to make a .env file in root with the url of pocketbase db
+API_BASE_URL=https://dburl
+# also need to add environment vars in cloud hosting service: name - API_BASE_URL, url - url
+```
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
