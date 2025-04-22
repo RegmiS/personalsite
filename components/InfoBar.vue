@@ -21,14 +21,16 @@
           <img src="/public/volunteertest.svg">
           Volunteering
         </NuxtLink>
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2" to="/">
+        <a class="text-xl underline-offset-2 flex flex-row gap-2" href="https://github.com/RegmiS" target="_blank"
+          rel="noopener noreferrer">
           <img class="bg-black" width="24" height="28" src="/public/github.svg">
           Github
-        </NuxtLink>
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2" to="/">
+        </a>
+        <a class="text-xl underline-offset-2 flex flex-row gap-2" href="https://www.linkedin.com/in/san-regmi/"
+          target="_blank" rel="noopener noreferrer">
           <img class="" width="24" height="28" src="/public/linkedin.svg">
           Linkedin
-        </NuxtLink>
+        </a>
         <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-1" to="/">
           <img class="" width="24" height="28" src="/public/pdf.svg">
           <img class="" width="24" height="28" src="/public/newtab.svg">
