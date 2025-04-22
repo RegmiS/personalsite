@@ -1,5 +1,5 @@
 # Personal website - made to display projects and learn new tech
-Project is built using Pocketbase hosted on Railway and frontend is hosted on netlify
+### Project stack: PocketBaseDB, TS, JS, Nuxt3, Vue, Tailwindcss, Netlify, Railway, NodeJS
 
 ### Pocketbase setup:
 ```bash

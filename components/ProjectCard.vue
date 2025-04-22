@@ -27,7 +27,7 @@
     </div>
 
 
-    <div class="flex flex-row gap-3">
+    <div class="flex flex-row gap-3 flex-wrap">
       <Tag v-for="tag in project.tagNames" :key="tag" :title="tag" />
     </div>
 

@@ -4,7 +4,7 @@
       aria-placeholder="test" />
     <div class="text-center shadow-2xl">
       <p class="font-bold text-slate-900 text-xl">RegmiS</p>
-      <p class="font-medium">Developer looking to learn and make interesting things</p>
+      <p class="font-medium pb-2">Developer looking to learn and make interesting things</p>
     </div>
     <section class="flex flex-col">
       <p class="text-left font-bold text-3xl">Pages</p>

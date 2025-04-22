@@ -6,10 +6,9 @@ export default defineEventHandler(async () => {
     const pb = new PocketBase(baseUrl);
 
     const userId = '3wllcx2wa1j8dij';
-    
+
     const projects = await pb.collection('projects').getFullList({
         filter: `user = "${userId}"`,
-        sort: '-created',
         expand: 'images,tags',
     });
 
@@ -20,9 +19,9 @@ export default defineEventHandler(async () => {
             const url = pb.files.getURL(img, img.image);
             urls.push(url);
         });
-        
+
         project["urls"] = urls;
-        
+
         let tagNames = [];
         const tags = project.expand?.tags || [];
         tags.forEach(tag => {
