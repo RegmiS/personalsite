@@ -24,6 +24,8 @@
         <img width="24" height="28" src="/public/github.svg" />
         <p class="text-white font-bold">Github</p>
       </a>
+
+      <p class="gap-x-3 font-bold ">Finished on: {{ formatTime(project.completed) }}</p>
     </div>
 
 
@@ -46,6 +48,7 @@
 <script setup>
 const props = defineProps(['project']);
 
+
 import 'vue3-carousel/carousel.css';
 import { Carousel, Slide, Navigation } from 'vue3-carousel';
 
@@ -58,6 +61,13 @@ const config = {
   wrapAround: true,
 }
 
+function formatTime(datestr) {
+  if (!datestr) {
+    return "";
+  }
+  const date = new Date(datestr);
+  return date.toLocaleDateString(undefined, { year: 'numeric', month: 'long' });
+}
 
 
 </script>

@@ -10,6 +10,7 @@ export default defineEventHandler(async () => {
     const projects = await pb.collection('projects').getFullList({
         filter: `user = "${userId}"`,
         expand: 'images,tags',
+        sort: '-completedon',
     });
 
     projects.forEach((project) => {

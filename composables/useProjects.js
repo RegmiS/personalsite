@@ -3,10 +3,10 @@ export const useProjects = () => {
     const allTags = useState('allTags', () => []);
 
     const fetchProjects = async () => {
-        if (projects.value.length === 0){
+        if (projects.value.length === 0) {
             const data = await $fetch('/api/projects');
             // console.log(data);
-            
+
             projects.value = data.map((project) => {
                 return {
                     id: project.id,
@@ -16,6 +16,7 @@ export const useProjects = () => {
                     website: project.websitelink,
                     urls: project.urls,
                     tagNames: project.tagNames,
+                    completed: project.completedon,
                 }
             });
         }
