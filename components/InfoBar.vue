@@ -9,18 +9,30 @@
     <section class="flex flex-col">
       <p class="text-left font-bold text-3xl">Pages</p>
       <div class="ml-2 flex flex-col mt-2 gap-2">
-        <NuxtLink class="text-xl underline underline-offset-2 flex flex-row gap-2" to="/">
+        <NuxtLink class="text-xl flex flex-row gap-2" 
+          :class="{ 'underline underline-offset-2': route.path === '/' }"
+          to="/"
+        >
           <img class="" src="/public/desktop_cloud_stack.svg">
           Projects
         </NuxtLink>
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2" to="/">
+
+        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2"
+          :class="{ 'underline underline-offset-2': route.path === '/research' }"
+          to="/research"
+        >
           <img src="/public/science.svg">
           Research
         </NuxtLink>
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2" to="/">
+
+        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2"
+          :class="{ 'underline underline-offset-2': route.path === '/volunteering' }"
+          to="/volunteering"
+        >
           <img src="/public/volunteertest.svg">
           Volunteering
         </NuxtLink>
+        
         <a class="text-xl underline-offset-2 flex flex-row gap-2" href="https://github.com/RegmiS" target="_blank"
           rel="noopener noreferrer">
           <img class="bg-black" width="24" height="28" src="/public/github.svg">
@@ -50,3 +62,8 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { useRoute } from 'vue-router'
+const route = useRoute()
+</script>
