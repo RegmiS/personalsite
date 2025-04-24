@@ -30,7 +30,7 @@
 
       </div>
 
-      <div class="flex flex-row p-4 pt-1 gap-x-3">
+      <div class="flex flex-row p-4 pt-1 gap-x-3 flex-wrap gap-y-1">
         <button :class="{
           'tagbtn text-white': selectedTags.includes(tag),
           'tagbtn': allTags.includes(tag)
