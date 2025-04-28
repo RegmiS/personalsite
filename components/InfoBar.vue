@@ -43,16 +43,17 @@
           <img class="" width="24" height="28" src="/public/linkedin.svg">
           Linkedin
         </a>
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-1" to="/">
+        <a class="text-xl underline-offset-2 flex flex-row gap-1" href="/api/resumes" target="_blank">
           <img class="" width="24" height="28" src="/public/pdf.svg">
           <img class="" width="24" height="28" src="/public/newtab.svg">
           Resume Open
-        </NuxtLink>
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-1" to="/">
+        </a>
+        
+        <!-- <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-1" to="/">
           <img class="" width="24" height="28" src="/public/pdf.svg">
           <img class="" width="24" height="28" src="/public/download.svg">
           Resume Download
-        </NuxtLink>
+        </NuxtLink> -->
       </div>
     </section>
     <div class="inline">
@@ -65,5 +66,7 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
-const route = useRoute()
+const route = useRoute();
+
+// const { resume } = useResume();
 </script>
