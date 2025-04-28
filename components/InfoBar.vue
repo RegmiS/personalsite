@@ -17,7 +17,7 @@
           Projects
         </NuxtLink>
 
-        <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2"
+        <!-- <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-2"
           :class="{ 'underline underline-offset-2': route.path === '/research' }"
           to="/research"
         >
@@ -31,7 +31,7 @@
         >
           <img src="/public/volunteertest.svg">
           Volunteering
-        </NuxtLink>
+        </NuxtLink> -->
         
         <a class="text-xl underline-offset-2 flex flex-row gap-2" href="https://github.com/RegmiS" target="_blank"
           rel="noopener noreferrer">

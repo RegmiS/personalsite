@@ -11,8 +11,7 @@ import ProjectCard from '../components/ProjectCard.vue'
 import { useProjects } from '../composables/useProjects'
 import ProjectFilter from '../components/ProjectFilter.vue'
 
-const { projects, allTags, fetchProjects } = useProjects();
-onMounted(fetchProjects);
+const { projects, allTags} = useProjects();
 
 const selectedTags = ref([]);
 const mode = ref('all');
@@ -24,7 +23,7 @@ const filteredProjects = computed(() => {
   if (mode.value === 'none') {
     return [];
   }
-
+  
   // Manual: only show if ANY tag matches
   return projects.value.filter((project) =>
     project.tagNames?.some((tag) => selectedTags.value.includes(tag))

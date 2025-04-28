@@ -33,3 +33,9 @@
   filter: blur(0px);
 }
 </style>
+
+<script setup>
+const { fetchProjects } = useProjects();
+onMounted(fetchProjects);
+
+</script>
