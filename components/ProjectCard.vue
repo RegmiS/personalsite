@@ -12,7 +12,7 @@
     </Carousel>
 
     <p class="border-2 p-2">{{ project.description }}</p>
-    <div class="flex flex-row gap-3">
+    <div class="flex flex-col md:flex-row gap-3 items-start md:items-center">
       <a v-if="project.website !== ''" class="flex flex-row bg-slate-500 rounded-md" :href="project.website"
         target="_blank" rel="noopener noreferrer">
         <img width="24" height="28" src="/public/websiteopen.svg" />
@@ -55,10 +55,19 @@ import { Carousel, Slide, Navigation } from 'vue3-carousel';
 const imageUrls = props['project'].urls;
 
 const config = {
-  height: 300,
   itemsToShow: 2,
-  gap: 4,
   wrapAround: true,
+  gap: 4,
+  breakpoints: {
+    768: {
+      itemsToShow: 2,
+      height: 300,
+    },
+    480: {
+      itemsToShow: 1,
+      height: 150,
+    }
+  }
 }
 
 function formatTime(datestr) {

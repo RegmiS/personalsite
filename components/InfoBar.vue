@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col overflow-y-auto p-8 z-10 gap-y-6 h-full">
+  <div class="flex flex-col p-8 z-10 gap-y-6 md:h-full md:overflow-y-auto">
     <img class="rounded-4xl cover" src="/public/images/profileimg.jpeg" width="400" height="400" alt=""
       aria-placeholder="test" />
     <div class="text-center shadow-2xl">
