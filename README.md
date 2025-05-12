@@ -1,4 +1,4 @@
-# Personal website - made to display projects and learn new tech
+# Personal website - Displaying my projects and learning new tech
 Tech stack: PocketBaseDB, TS, JS, Nuxt3, Vue, Tailwindcss, Netlify, Railway, NodeJS
 <br> <br>
 Goal: Learn a new framework and develop a website that can be updated and added onto. Ex - If I ever want to learn more about Auth, I can add it into the server and use it as a test ground.
@@ -6,6 +6,15 @@ Goal: Learn a new framework and develop a website that can be updated and added 
 Pitfalls: Config files and uploading/deploying to the cloud. Nuxt 3 compiling and nuxi vs nuxt, configuring for SSR and understanding the production build process.
 - Learning how to set environment variables for cloud deployment and setting up the pocketbase server on Railway was also a little bit confusing.
 - For example, when setting 'netlify' as the preset for building, it will build into a /dist folder - but understanding this took a bit of time, because I was convinced that it should be outputting to a .output folder when SSR is enabled.
+
+### Things I learned from this project:
+- Vue and templating
+- Setting up serverless hosting using Netlify and hosting a DB on the cloud
+- Layouts in Nuxt3 and SSR (Server side rendering)
+- Using efficient DB calls (to save on usage and unnecessary calls)
+- Transition effects between pages in Nuxt and doing transitions
+- TailwindCSS and how easy/fun it is
+- Vue Caurosel 
 
 ### Pocketbase setup:
 ```bash
