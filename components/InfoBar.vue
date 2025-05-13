@@ -4,7 +4,7 @@
       aria-placeholder="test" />
     <div class="text-center shadow-2xl">
       <p class="font-bold text-slate-900 text-xl">RegmiS</p>
-      <p class="font-medium pb-2">Developer looking to learn and make interesting things</p>
+      <p class="font-medium pb-2">Developer trying to get over the fear of failure</p>
     </div>
     <section class="flex flex-col">
       <p class="text-left font-bold text-3xl">Pages</p>
@@ -58,8 +58,7 @@
     </section>
     <div class="inline">
       <p class="text-left font-bold text-3xl">About</p>
-      <p class="mt-1 ml-2">Graduated from UofC with experiences in different industries - from environment to research.
-        Currently working on expanding skillset and learning new technologies like Rust and Golang.</p>
+      <p class="mt-1 ml-2">Graduated from UofC with experiences in environment, sustainability, research, vounteering, and startups. I'm currently trying to build the projects that I always wanted to make but was too scared to start. I'm also slowly becoming a vim addict...</p>
     </div>
   </div>
 </template>
