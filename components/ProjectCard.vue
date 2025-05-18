@@ -13,14 +13,14 @@
 
     <p class="border-2 p-2">{{ project.description }}</p>
     <div class="flex flex-col md:flex-row gap-3 items-start md:items-center">
-      <a v-if="project.website !== ''" class="flex flex-row bg-slate-500 rounded-md" :href="project.website"
-        target="_blank" rel="noopener noreferrer">
+      <a v-if="project.website && project.website.trim() !== ''" class="flex flex-row bg-slate-500 rounded-md"
+        :href="project.website" target="_blank" rel="noopener noreferrer">
         <img width="24" height="28" src="/public/websiteopen.svg" />
         <p class="text-black font-bold">Website</p>
       </a>
 
-      <a v-if="project.github !== ''" class="flex flex-row bg-slate-500 rounded-md" :href="project.github"
-        target="_blank" rel="noopener noreferrer">
+      <a v-if="project.github && project.github.trim() !== ''" class="flex flex-row bg-slate-500 rounded-md"
+        :href="project.github" target="_blank" rel="noopener noreferrer">
         <img width="24" height="28" src="/public/github.svg" />
         <p class="text-white font-bold">Github</p>
       </a>

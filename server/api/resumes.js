@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
     const baseUrl = config.public.apiBaseUrl;
     const pb = new PocketBase(baseUrl);
 
-    const userId = '3wllcx2wa1j8dij';
+    const userId = '992p58zv5imdy48';
 
     const latestresume = await pb.collection('resumes').getList(1, 1, {
         filter: `user = "${userId}"`,

@@ -20,7 +20,7 @@ export const useProjects = () => {
                 }
             });
         }
-        
+
         const tagSet = new Set();
         projects.value.forEach(p => {
             p.tagNames.forEach(tag => tagSet.add(tag));
