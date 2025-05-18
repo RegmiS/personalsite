@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase';
-import { sendRedirect, setHeader } from 'h3';
+import { setHeader } from 'h3';
 import { sendStream } from 'h3';
 
 export default defineEventHandler(async (event) => {
@@ -15,6 +15,10 @@ export default defineEventHandler(async (event) => {
     });
 
     const resume = latestresume.items[0];
+
+    if (!resume || !resume.file) {
+        throw createError({ statusCode: 404, statusMessage: 'Resume not found.' });
+    }
     const fileUrl = pb.files.getURL(resume, resume.file);
 
     const response = await fetch(fileUrl);
