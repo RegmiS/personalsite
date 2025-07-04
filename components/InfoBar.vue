@@ -9,10 +9,8 @@
     <section class="flex flex-col">
       <p class="text-left font-bold text-3xl">Pages</p>
       <div class="ml-2 flex flex-col mt-2 gap-2">
-        <NuxtLink class="text-xl flex flex-row gap-2" 
-          :class="{ 'underline underline-offset-2': route.path === '/' }"
-          to="/"
-        >
+        <NuxtLink class="text-xl flex flex-row gap-2" :class="{ 'underline underline-offset-2': route.path === '/' }"
+          to="/">
           <img class="" src="/public/desktop_cloud_stack.svg">
           Projects
         </NuxtLink>
@@ -32,7 +30,7 @@
           <img src="/public/volunteertest.svg">
           Volunteering
         </NuxtLink> -->
-        
+
         <a class="text-xl underline-offset-2 flex flex-row gap-2" href="https://github.com/RegmiS" target="_blank"
           rel="noopener noreferrer">
           <img class="bg-black" width="24" height="28" src="/public/github.svg">
@@ -43,12 +41,12 @@
           <img class="" width="24" height="28" src="/public/linkedin.svg">
           Linkedin
         </a>
-        <a class="text-xl underline-offset-2 flex flex-row gap-1" href="/api/resumes" target="_blank">
+        <a class="text-xl underline-offset-2 flex flex-row gap-1" href="/resume" target="_blank">
           <img class="" width="24" height="28" src="/public/pdf.svg">
           <img class="" width="24" height="28" src="/public/newtab.svg">
           Resume Open
         </a>
-        
+
         <!-- <NuxtLink class="text-xl underline-offset-2 flex flex-row gap-1" to="/">
           <img class="" width="24" height="28" src="/public/pdf.svg">
           <img class="" width="24" height="28" src="/public/download.svg">
@@ -58,7 +56,9 @@
     </section>
     <div class="inline">
       <p class="text-left font-bold text-3xl">About</p>
-      <p class="mt-1 ml-2">Graduated from UofC with experiences in environment, sustainability, research, vounteering, and startups. I'm currently trying to build the projects that I always wanted to make but was too scared to start. I'm also slowly becoming a vim addict...</p>
+      <p class="mt-1 ml-2">Graduated from UofC with experiences in environment, sustainability, research, vounteering,
+        and startups. I'm currently trying to build the projects that I always wanted to make but was too scared to
+        start. I'm also slowly becoming a vim addict...</p>
     </div>
   </div>
 </template>

@@ -2,4 +2,4 @@
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Headers: Content-Type
   Access-Control-Allow-Methods: GET, POST, OPTIONS
-  Content-Security-Policy: default-src * 'unsafe-inline' 'unsafe-eval' data: blob:
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'

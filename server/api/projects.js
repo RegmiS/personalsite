@@ -17,8 +17,8 @@ export default defineEventHandler(async () => {
         let urls = [];
         const images = project.expand?.images || [];
         images.forEach((img) => {
-            const url = pb.files.getURL(img, img.imagefile);
-            urls.push(url);
+            const proxyUrl = `/api/project-image?recordId=${img.id}&filename=${img.imagefile}&collectionId=${img.collectionId}`;
+            urls.push(proxyUrl);
         });
 
         project["urls"] = urls;

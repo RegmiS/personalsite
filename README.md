@@ -1,9 +1,9 @@
 # Personal website - Displaying my projects and learning new tech
-Tech stack: PocketBaseDB, TS, JS, Nuxt3, Vue, Tailwindcss, Netlify, Railway, NodeJS
+Tech stack: PocketBaseDB, TS, JS, Nuxt3, Vue, Tailwindcss, Netlify, Railway/Koyeb, NodeJS
 <br> <br>
 Goal: Learn a new framework and develop a website that can be updated and added onto. Ex - If I ever want to learn more about Auth, I can add it into the server and use it as a test ground.
 
-Pitfalls: Config files and uploading/deploying to the cloud. Nuxt 3 compiling and nuxi vs nuxt, configuring for SSR and understanding the production build process.
+Pitfalls: Config files and uploading/deploying to the cloud. Nuxt 3 compiling, nuxi vs nuxt, configuring for SSR, and understanding the production build process.
 - Learning how to set environment variables for cloud deployment. Setting up the pocketbase server on Railway was also a little bit confusing.
     - For example, when setting 'netlify' as the preset for building, it will build into a /dist folder - but understanding why this was the case took a bit of time (because I was convinced that it should be outputting to a /.output folder when SSR is enabled)
 
@@ -79,4 +79,9 @@ npm run build
 
 # pushing to netlify after building
 netlify deploy
+# push to netlify in production branch
+netlify deploy --prod
+
+# since I use volta to install netlify, I have to do this:
+npxnetlify deploy --prod
 ```
